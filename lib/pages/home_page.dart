@@ -23,11 +23,8 @@ class _HomePageState extends State<HomePage> {
       pw.Page(
         pageFormat: PdfPageFormat.a4,
         build: (pw.Context context) {
-          return pw.Container(
-            width: 50,
-            height: 50,
-            color: PdfColor.fromHex("#181818"),
-          );
+          return pw.Text(
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nunc at tortor sodales congue. Nulla ornare convallis diam, at mattis justo posuere efficitur. Aliquam consectetur fringilla eros quis rutrum. Mauris tincidunt erat non porttitor scelerisque. Aliquam non mauris nec est luctus vulputate eget quis dolor. Phasellus sit amet ultricies ipsum, quis tincidunt mauris. Ut vestibulum est lorem, et vulputate eros fermentum sit amet. Sed quis tellus id erat rhoncus tempus quis in ex. Praesent eget sem quis turpis dictum euismod. Suspendisse scelerisque malesuada tortor eget dictum. Aenean elementum nec nisl sed congue. Aenean consequat purus ligula, a egestas lorem mattis sit amet.");
         },
       ),
     );
