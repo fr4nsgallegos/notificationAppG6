@@ -15,6 +15,13 @@ class _HomePageState extends State<HomePage> {
   Logger logger = Logger();
 
   Future<void> _createExcel() async {
+    DateTime now = DateTime.now();
+    String newNow = now
+        .toString()
+        .replaceAll(":", "_")
+        .replaceAll(".", "_")
+        .replaceAll(" ", "_");
+    logger.e(now);
     final excel.Workbook workbook = excel.Workbook();
 
     final excel.Worksheet sheet = workbook.worksheets[0];
@@ -28,7 +35,7 @@ class _HomePageState extends State<HomePage> {
 
     final String path = (await getApplicationSupportDirectory()).path;
 
-    final String filename = '$path/ARCHIVOEXCEL.xlsx';
+    final String filename = '$path/ARCHIVOEXCEL-$newNow.xlsx';
     logger.d(filename);
 
     final File file = File(filename);
